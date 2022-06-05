@@ -23,6 +23,8 @@ import static org.springframework.http.HttpHeaders.CONTENT_DISPOSITION;
 
 
 @RestController
+@CrossOrigin(origins = "*", methods = {RequestMethod.POST, RequestMethod.OPTIONS}, allowedHeaders = {"Content-Type", "X-Requested-With", "accept", "Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers"}, exposedHeaders = {"Access-Control-Allow-Origin", "Access-Control-Allow-Credentials", "File-Name"})
+
 @RequestMapping("/file")
 public class FileResource {
 
